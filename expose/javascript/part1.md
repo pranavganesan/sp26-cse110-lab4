@@ -20,8 +20,9 @@
    * **Explanation:** Unlike `var`, `let` variables are restricted to the block in which they are declared (the curly braces `{ }` of the `if` statement). Because line 13 is outside of that `if` block, `result` is out of scope and the engine cannot find the variable, resulting in an error.
 
 ### const declaration
-6. **What is printed by line 9?** `values added: 20`  
-   *Explanation:* Like `let`, `const` is block-scoped. Line 9 is within that scope.
 
-7. **What is printed by line 13?** `Error` (ReferenceError: result is not defined)  
-   *Explanation:* `const` variables are also block-scoped. Line 13 is outside the `if` block, so it cannot access `result`.
+6. **What is printed by line 9?** `Error` (specifically `TypeError: Assignment to constant variable`)
+   * **Explanation:** While `const` has the same block scope as `let` (meaning line 9 is inside the correct block), `const` variables cannot be reassigned after their initial declaration. On line 7, the code attempts to reassign `result` to the sum of `num1 + num2`, which triggers a TypeError.
+
+7. **What is printed by line 13?** `Error` (specifically `ReferenceError: result is not defined`)
+   * **Explanation:** Even if the reassignment error on line 7 didn't exist, line 13 would still fail because `const` is **block-scoped**. The variable `result` only exists within the curly braces `{ }` of the `if` statement. Once the code execution moves to line 13, `result` is no longer in scope.
