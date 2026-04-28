@@ -1,13 +1,15 @@
 # Part 1: Variables & Scoping
 
 ### var declaration
-1. **What is printed by line 9?** `values added: 20`  
-   *Explanation:* Since `var` is function-scoped and the condition `add` was true, `result` was initialized and assigned the value of 20. Line 9 is within the scope.
 
-2. **What is printed by line 13?** `final result: 20`  
-   *Explanation:* Because `var` does not have block scope, the variable `result` "leaks" out of the `if` block and remains accessible anywhere within the `sumValues` function.
+1. **What is printed by line 9?** `values added: 20`
+   * **Explanation:** The variable `result` is declared using `var`, which has **function scope**. Since the `if (add)` condition is true, the code block executes, calculates the sum of 10 and 10, and logs it to the console.
 
-3. **Why should you not use var?** `var` can lead to many bugs because it allows for variable redeclaration and lacks block-scoping. This often results in variables being accessible in places they shouldn't be, leading to naming conflicts and confusing logic.
+2. **What is printed by line 13?** `final result: 20`
+   * **Explanation:** Because `var` is function-scoped rather than block-scoped, the variable `result` is still accessible anywhere within the `sumValues` function, even after the `if` block has closed.
+
+3. **Why should you not use var? Explain why.**
+   `var` is generally avoided in modern JavaScript because its function-scoping leads to "leaky" variables that can be accessed outside of the blocks (like `if` statements or loops) where they were defined. This often causes naming conflicts, accidental redeclarations, and bugs related to "hoisting." Using `let` and `const` is preferred because they provide **block scope**, making the code more predictable and easier to debug.
 
 ### let declaration
 4. **What is printed by line 9?** `values added: 20`  
