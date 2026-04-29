@@ -1,14 +1,13 @@
 # sp26-cse110-lab4
 
-## Repository Overview
-This repository contains the deliverables for CSE 110 Lab 4, focusing on JavaScript fundamentals, Chrome DevTools debugging, and workflow automation.
+## 📂 Project Structure
 
-## Directory Structure
-* **expose/**: JavaScript scoping exercises and CI/CD pipeline documentation.
-* **explore/**: DevTools network analysis, debugging tasks, and system diagramming.
-* **expand/**: Technical reflections and free-response questions.
+* **[expose/](https://github.com/pranavganesan/sp26-cse110-lab4/tree/main/expose)**: JavaScript scoping and CI/CD logic.
+* **[explore/devtools/](https://github.com/pranavganesan/sp26-cse110-lab4/tree/main/explore/devtools)**: Chrome DevTools debugging reports and screenshots.
+* **[explore/diagramming/](https://github.com/pranavganesan/sp26-cse110-lab4/tree/main/explore/diagramming)**: Retail shop logic flowchart.
+* **[expand/screenshots/](https://github.com/pranavganesan/sp26-cse110-lab4/tree/main/expand/screenshots)**: Visual evidence of the debugging process.
 
-## Tools Used
-* **Node.js**: Environment for executing JavaScript logic.
-* **Chrome DevTools**: Used for network monitoring and breakpoint debugging.
-* **Draw.io**: Integration used for creating the retail shop logic flowchart.
+## 📊 Logic Flowchart
+Below is the system roadmap for the simplified retail shop:
+
+![Retail Shop Flowchart](./explore/diagramming/diagram.drawio.png)
